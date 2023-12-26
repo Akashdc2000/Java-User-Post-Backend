@@ -2,6 +2,7 @@ package com.simple.project.controller;
 
 import com.simple.project.entity.User;
 import com.simple.project.service.UserService;
+import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,6 +18,7 @@ public class UserController {
         this.userService = userService;
     }
 
+    @Operation(summary = "This api is used to fetch data of all Users")
     @GetMapping("/user")
     public ResponseEntity<List<User>> getAllUsers() {
         return userService.getAllUsers();

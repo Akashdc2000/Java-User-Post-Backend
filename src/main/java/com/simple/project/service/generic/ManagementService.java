@@ -20,7 +20,7 @@ public class ManagementService {
 
     public void deletePostsByUserId(String userId) {
         if(userId == null || userId.isEmpty()) {
-            throw new CustomException(HttpStatus.BAD_REQUEST, "User Id not should not be null or empty");
+            throw new CustomException(HttpStatus.BAD_REQUEST, "User Id should not be null or empty");
         }
         userPostRepository.deleteAllByUserId(userId);
     }

@@ -33,7 +33,8 @@ public class SecurityConfiguration {
                 .exceptionHandling().authenticationEntryPoint(customAuthenticationEntryPoint)
                 .and()
                 .authorizeHttpRequests().requestMatchers("/v3/**","/swagger-ui/**").permitAll()
-                .anyRequest().authenticated()
+//                .anyRequest().authenticated()
+                .anyRequest().permitAll()
                 .and()
                 .httpBasic();
 

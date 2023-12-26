@@ -1,6 +1,5 @@
 package com.simple.project.controller;
 
-import com.simple.project.entity.User;
 import com.simple.project.entity.UserPost;
 import com.simple.project.exception.CustomException;
 import com.simple.project.service.UserPostService;
